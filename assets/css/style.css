@@ -1,0 +1,161 @@
+@font-face {
+  font-family: Studebaker;
+  src: url(../StudebakerNF.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Studebaker;
+  box-sizing: border-box;
+  letter-spacing: 4px;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  background: rgb(211, 211, 211);
+}
+
+a,
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+}
+
+ul {
+  list-style-type: none;
+}
+
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+/* --------HEADER  */
+header {
+  background: black;
+}
+
+.top-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-inner {
+}
+
+header h1 {
+  color: white;
+  padding: 5px;
+}
+
+header a {
+  color: white;
+  font-size: 2em;
+  padding: 5px;
+  align-self: center;
+}
+
+.nav-list {
+  position: absolute;
+  display: none;
+  width: 100%;
+}
+
+.nav-list-item {
+  background: rgb(119, 119, 119);
+  font-size: 0.7em;
+  text-align: center;
+  padding: 5px;
+}
+
+/* ----------MAIN  */
+
+main {
+}
+
+.hero {
+}
+
+.hero-copy {
+  padding-top: 3em;
+  font-size: 1.3em;
+  font-weight: 900;
+  text-align: center;
+}
+
+.hero-img {
+  text-align: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 900px;
+  padding: 3em 0;
+}
+
+/* -----------FOOTER */
+
+footer {
+  height: 15px;
+  width: 100%;
+  background: black;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 720px) {
+  .top-header {
+    display: block;
+  }
+
+  .header-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #nav-icon {
+    display: none;
+  }
+
+  #nav-list {
+    position: relative;
+    display: block !important;
+    width: auto;
+    align-self: center;
+  }
+
+  .nav-list-item {
+    background: transparent;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+  }
+}

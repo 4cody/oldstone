@@ -57,6 +57,7 @@ ul {
 /* --------HEADER  */
 header {
   background: black;
+  min-height: 100px;
 }
 
 .top-header {

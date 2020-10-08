@@ -65,12 +65,19 @@ header {
   justify-content: space-between;
 }
 
+#nav-icon {
+  align-self: center;
+  font-size: 2em;
+  padding: 5px;
+}
+
 .header-inner {
 }
 
 header h1 {
   color: white;
   padding: 5px;
+  font-size: 3em;
   font-family: studebaker;
 }
 
@@ -133,7 +140,8 @@ footer {
 footer p {
   color: white;
   font-size: large;
-  font-size: 1em;
+  font-size: 1.5em;
+  padding: 7px;
 }
 
 @media screen and (min-width: 480px) {

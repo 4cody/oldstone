@@ -145,8 +145,8 @@ footer p {
   padding: 7px;
 }
 
-@media screen and (min-width: 480px) {
-}
+/* @media screen and (min-width: 480px) {
+} */
 
 @media screen and (min-width: 720px) {
   .top-header {
@@ -179,4 +179,9 @@ footer p {
   .container {
     width: 1080px;
   }
+}
+
+#test-div {
+  font-size: 1.3em;
+  font-weight: bold;
 }

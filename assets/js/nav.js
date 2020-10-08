@@ -12,3 +12,9 @@ const handleNavClick = (e) => {
 };
 
 navIcon.addEventListener('click', handleNavClick);
+
+const testd = document.querySelector('#test-div');
+
+let inWid = window.innerWidth;
+
+testd.innerHTML = `<p> ${inWid} <p>`;

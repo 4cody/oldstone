@@ -16,5 +16,6 @@ navIcon.addEventListener('click', handleNavClick);
 const testd = document.querySelector('#test-div');
 
 let inWid = window.innerWidth;
+let inH = window.innerHeight;
 
-testd.innerHTML = `<p> ${inWid} <p>`;
+testd.innerHTML = `<p> ${inWid} x ${inH} <p>`;

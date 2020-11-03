@@ -113,6 +113,121 @@ nav {
   padding-left: 1.5rem;
 }
 
+.pictures-section {
+  display: grid;
+  place-content: center;
+}
+
+.picture-box {
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  width: 900px;
+}
+
+.carousel img {
+  min-width: 900px;
+  max-width: 900px;
+  height: 600px;
+}
+
+.btn-container {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.carousel-btn {
+  position: relative;
+  color: #938C7E;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.6rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+.carousel-btn:hover {
+  color: #1A1913;
+}
+
+.carousel-btn span {
+  display: block;
+  position: absolute;
+  background: #1A1913;
+}
+
+.carousel-btn span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s;
+}
+
+.carousel-btn:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.3s;
+}
+
+.carousel-btn span:nth-child(2) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.carousel-btn:hover span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.carousel-btn span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s;
+}
+
+.carousel-btn:hover span:nth-child(3) {
+  transform: scaleX(1);
+  transform-origin: top;
+  transition: transform 0.3s;
+}
+
+.carousel-btn span:nth-child(4) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.carousel-btn:hover span:nth-child(4) {
+  transform: scaleY(1);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
 *,
 *::before,
 *::after {
@@ -166,9 +281,12 @@ section {
   display: flex;
 }
 
+.silo-1 {
+  width: 100%;
+}
+
 .silo-2 {
   width: 50%;
-  border: 1px solid black;
 }
 
 .silo-inner {

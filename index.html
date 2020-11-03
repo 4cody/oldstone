@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <script defer src="assets/js/nav.js"></script>
+    <script defer src="assets/js/carousel.js"></script>
   </head>
   <body class="page-wrapper">
     <header>
@@ -27,13 +28,13 @@
           <div class="hero">
             <h1 class="hero-title">The Stone Tavern</h1>
           </div>
-          <nav>
+          <!-- <nav>
             <ul class="nav-list">
               <li>Our Story</li>
               <li>Our Story</li>
               <li>Our Story</li>
             </ul>
-          </nav>
+          </nav> -->
         </div>
       </div>
     </header>
@@ -69,5 +70,52 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <div class="container">
+        <div class="section-inner">
+          <div class="silo-1">
+            <div class="silo-inner pictures-section">
+              <div class="picture-box">
+                <div class="carousel">
+                  <img
+                    id="last"
+                    src="./assets/img/stone_tavern_05.jpg"
+                    alt=""
+                  />
+                  <img src="./assets/img/stone_tavern_02.jpg" alt="" />
+                  <img src="./assets/img/stone_tavern_03.jpg" alt="" />
+                  <img src="./assets/img/stone_tavern_04.jpg" alt="" />
+                  <img src="./assets/img/stone_tavern_05.jpg" alt="" />
+                  <img
+                    id="first"
+                    src="./assets/img/stone_tavern_02.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="btn-container">
+                <button id="prevBtn" class="carousel-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Previous
+                </button>
+                <button id="nextBtn" class="carousel-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
   </body>
 </html>

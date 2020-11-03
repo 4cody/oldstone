@@ -2,185 +2,178 @@
   font-family: Studebaker;
   src: url(../StudebakerNF.ttf);
 }
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: helvetica;
-  box-sizing: border-box;
-  letter-spacing: 4px;
-}
-
-html,
-body {
-  width: 100%;
-  min-height: 100%;
-  position: relative;
-}
-
-body {
-  background: rgb(211, 211, 211);
-}
-
-a {
-  font-family: studebaker;
-}
-
-a,
-a:active,
-a:link,
-a:visited {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-
-a:hover {
-}
-
-ul {
-  list-style-type: none;
-}
-
-.page-wrapper {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-}
-
-.container {
-  width: 100%;
-  margin: auto;
-  position: relative;
-}
-
-/* --------HEADER  */
 header {
-  background: black;
+  height: 100vh;
+  min-height: 500px;
 }
 
-.top-header {
+.header-container {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-#nav-icon {
-  align-self: center;
-  font-size: 2em;
-  padding: 5px;
 }
 
 .header-inner {
-}
-
-header h1 {
-  color: white;
-  padding: 5px;
-  font-size: 3em;
-  font-family: studebaker;
-}
-
-.nav-list-item a {
-  color: white;
-  font-size: 2em;
-  padding: 5px;
-  align-self: center;
-}
-
-.nav-list {
-  position: absolute;
-  display: none;
   width: 100%;
-}
-
-.nav-list-item {
-  background: rgb(119, 119, 119);
-  font-size: 0.7em;
-  text-align: center;
-  padding: 5px;
-}
-
-/* ----------MAIN  */
-
-main {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background-color: #dddddd;
 }
 
 .hero {
-}
-
-.hero-copy {
-  padding-top: 3em;
-  font-size: 1.3em;
-  font-weight: 900;
   text-align: center;
+  position: relative;
+  overflow-x: hidden;
 }
 
-.hero-img {
-  text-align: center;
+.hero-title {
+  font-size: 9rem;
+  opacity: 0.6;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.hero-img img {
-  width: 100%;
-  max-width: 900px;
-  padding: 3em 0;
-}
-
-/* -----------FOOTER */
-
-footer {
-  height: auto;
-  width: 100%;
-  background: black;
+.hero-title::after {
+  content: "";
   position: absolute;
-  bottom: 0;
-  text-align: center;
+  top: 0;
+  left: -350px;
+  width: 8%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+  transform: skewX(-30deg);
 }
 
-footer p {
-  color: white;
-  font-size: large;
-  font-size: 1.5em;
-  padding: 7px;
+.hero-title:hover::after,
+.hero-title:focus::after {
+  animation: sheen 1.4s forwards;
 }
 
-/* @media screen and (min-width: 480px) {
-} */
-
-@media screen and (min-width: 1000px) {
-  .top-header {
-    display: block;
+@keyframes sheen {
+  100% {
+    left: 1100px;
   }
-
+}
+@media only screen and (max-width: 600px) {
   .header-inner {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+    place-content: start center;
   }
 
-  #nav-icon {
-    display: none;
-  }
-
-  #nav-list {
-    position: relative;
-    display: block !important;
-    width: auto;
-    align-self: center;
-  }
-
-  .nav-list-item {
-    background: transparent;
+  .hero-title {
+    font-size: 3rem;
   }
 }
-
-@media screen and (min-width: 1080px) {
-  .container {
-    width: 1080px;
-  }
+nav {
+  margin-left: auto;
+  margin-right: auto;
+  width: 45vw;
+  min-width: 560px;
 }
 
-#test-div {
-  font-size: 1.3em;
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+}
+.nav-list li {
+  font-size: 1.5rem;
   font-weight: bold;
 }
+
+@media only screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+    min-width: 100vw;
+  }
+}
+.about-section-hero {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about-section-hero h2 {
+  font-size: 5rem;
+  padding-right: 1.5rem;
+}
+
+.about-section-bg-left {
+  background-image: url("../img/stone_tavern_01.jpg");
+  background-size: cover;
+}
+
+.about-section-bg-right {
+  background: #1A1913;
+}
+
+.about-section-content {
+  width: 70%;
+  font-size: 1.5rem;
+  color: white;
+  letter-spacing: 0.1rem;
+  padding-left: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #dddddd;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3 {
+  font-family: Studebaker;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  background-color: #dddddd;
+  margin-top: 6rem;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.container {
+  width: 1490px;
+  height: 100%;
+  margin: auto;
+  background-color: #dddddd;
+}
+
+.section-inner {
+  background-color: #dddddd;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.silo-2 {
+  width: 50%;
+  border: 1px solid black;
+}
+
+.silo-inner {
+  padding: 6rem 0;
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

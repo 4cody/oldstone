@@ -1,0 +1,61 @@
+@use 'head'  
+@use 'nav'
+@use 'about'
+  
+@use 'vars'
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+html 
+  font-size: 16px // set deafult font size for rems
+  font-family: vars.$secondary_font
+  width: 100%
+  height: 100%
+
+body
+  background-color: vars.$palette_white
+  width: 100%
+  height: 100%
+
+h1,h2,h3
+  font-family: vars.$main_font // Headign font
+
+ul
+  list-style: none
+
+section
+  background-color: vars.$palette_white
+  margin-top: 6rem
+
+.section-heading
+  text-align: center
+  font-size: 4rem
+
+.container
+  width: 1490px
+  height: 100%
+  margin: auto
+  background-color: vars.$palette_white
+
+.section-inner
+  background-color: vars.$palette_white
+  width: 100%
+  height: auto
+  display: flex
+
+.silo-2
+  width: 50%
+  border: 1px solid black
+
+.silo-inner
+  // background-color: vars.$palette_white
+  padding: 6rem 0
+  height: 100%
+
+
+

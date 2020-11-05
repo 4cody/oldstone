@@ -2,230 +2,109 @@
   font-family: Studebaker;
   src: url(../StudebakerNF.ttf);
 }
-header {
-  height: 100vh;
-  min-height: 500px;
-}
-
-.header-container {
-  position: relative;
-}
-
-.header-inner {
-  width: 100%;
-  height: 100%;
+.hero-screen {
   display: grid;
   place-content: center;
-  background-color: #dddddd;
-}
-
-.hero {
-  text-align: center;
-  position: relative;
-  overflow-x: hidden;
+  background-image: radial-gradient(#938C7E, #dddddd);
 }
 
 .hero-title {
   font-size: 9rem;
-  opacity: 0.6;
   margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
-.hero-title::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -350px;
-  width: 8%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
-  transform: skewX(-30deg);
+.hero-title-sub {
+  font-family: "Lato", sans-serif;
+  font-size: 2.2rem;
+  text-align: end;
+  color: white;
+  text-shadow: 2px 2px 4px black;
 }
 
-.hero-title:hover::after,
-.hero-title:focus::after {
-  animation: sheen 1.4s forwards;
-}
-
-@keyframes sheen {
-  100% {
-    left: 1100px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .header-inner {
-    place-content: start center;
-  }
-
-  .hero-title {
-    font-size: 3rem;
-  }
-}
 nav {
-  margin-left: auto;
-  margin-right: auto;
-  width: 45vw;
-  min-width: 560px;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-around;
-}
-.nav-list li {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-@media only screen and (max-width: 600px) {
-  nav {
-    width: 100%;
-    min-width: 100vw;
-  }
-}
-.about-section-hero {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
   height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
-
-.about-section-hero h2 {
-  font-size: 5rem;
-  padding-right: 1.5rem;
+.slider {
+  margin-left: 3rem;
 }
 
-.about-section-bg-left {
-  background-image: url("../img/stone_tavern_01.jpg");
-  background-size: cover;
-}
-
-.about-section-bg-right {
-  background: #1A1913;
-}
-
-.about-section-content {
-  width: 70%;
-  font-size: 1.5rem;
-  color: white;
-  letter-spacing: 0.1rem;
-  padding-left: 1.5rem;
-}
-
-.pictures-section {
-  display: grid;
-  place-content: center;
-}
-
-.picture-box {
-  overflow: hidden;
-}
-
-.carousel {
+.nav-btns {
+  margin-right: 3rem;
   display: flex;
-  width: 900px;
+  flex-direction: column;
 }
-
-.carousel img {
-  min-width: 900px;
-  max-width: 900px;
-  height: 600px;
-}
-
-.btn-container {
-  padding-top: 1rem;
-  display: flex;
-  justify-content: space-around;
-}
-
-.carousel-btn {
-  position: relative;
-  color: #938C7E;
-  border: none;
-  background: none;
+.nav-btns button {
   outline: none;
-  cursor: pointer;
-  padding: 0.6rem 2rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-size: 1.2rem;
-  transition: 0.5s;
+  font-size: 2rem;
+  border-radius: 24px;
+  background: none;
+  border: 2px solid white;
+  width: 3rem;
+  height: 3rem;
+  margin: 7rem 0;
+  transition: all 0.3s ease-out;
+}
+.nav-btns button:hover {
+  background: #dddddd;
+  border-color: #1A1913;
+  border-radius: 24px 24px 2px 2px;
+}
+.nav-btns button:active {
+  padding-bottom: 15px;
 }
 
-.carousel-btn:hover {
-  color: #1A1913;
+#down {
+  transform: rotate(180deg);
 }
 
-.carousel-btn span {
-  display: block;
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+.slider span {
+  margin: 1rem;
+}
+
+.about-inner {
+  position: relative;
+}
+.about-inner img {
   position: absolute;
-  background: #1A1913;
+}
+.about-inner img:nth-child(1) {
+  width: 600px;
+  right: 200px;
+  top: 320px;
+  transform: rotate(15deg);
+}
+.about-inner img:nth-child(2) {
+  width: 540px;
+  top: 120px;
+  left: 120px;
+  transform: rotate(-8deg);
+}
+.about-inner img:hover {
+  transform: translateZ(180deg);
 }
 
-.carousel-btn span:nth-child(1) {
-  left: 0;
-  bottom: 0;
-  width: 1px;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.3s;
+.about-copy {
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
-.carousel-btn:hover span:nth-child(1) {
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 0.3s;
-}
-
-.carousel-btn span:nth-child(2) {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s;
-}
-
-.carousel-btn:hover span:nth-child(2) {
-  transform: scaleX(1);
-  transform-origin: left;
-  transition: transform 0.3s;
-}
-
-.carousel-btn span:nth-child(3) {
-  right: 0;
-  bottom: 0;
-  width: 1px;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.3s;
-}
-
-.carousel-btn:hover span:nth-child(3) {
-  transform: scaleX(1);
-  transform-origin: top;
-  transition: transform 0.3s;
-}
-
-.carousel-btn span:nth-child(4) {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 1px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s;
-}
-
-.carousel-btn:hover span:nth-child(4) {
-  transform: scaleY(1);
-  transform-origin: right;
-  transition: transform 0.3s;
+.span-title {
+  font-family: Studebaker;
+  font-width: boldest;
 }
 
 *,
@@ -239,14 +118,12 @@ nav {
 html {
   font-size: 16px;
   font-family: "Lato", sans-serif;
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 body {
   background-color: #dddddd;
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -257,41 +134,31 @@ ul {
   list-style: none;
 }
 
-section {
-  background-color: #dddddd;
-  margin-top: 6rem;
-}
-
-.section-heading {
-  text-align: center;
-  font-size: 4rem;
-}
-
-.container {
-  width: 1490px;
-  height: 100%;
-  margin: auto;
-  background-color: #dddddd;
-}
-
-.section-inner {
-  background-color: #dddddd;
+.silo {
   width: 100%;
-  height: auto;
-  display: flex;
+  min-height: 100vh;
+  position: relative;
 }
 
-.silo-1 {
-  width: 100%;
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 2rem;
+  opacity: 0;
+  transition: all 0.3s ease-out;
 }
 
-.silo-2 {
-  width: 50%;
+.screen active {
+  opacity: 1;
 }
 
-.silo-inner {
-  padding: 6rem 0;
-  height: 100%;
+@media only screen and (max-width: 790px) {
+  body {
+    background: red;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

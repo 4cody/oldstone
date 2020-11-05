@@ -18,104 +18,63 @@
       href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
     />
-    <script defer src="assets/js/nav.js"></script>
+    <script
+      defer
+      src="assets/js/nav.js
+    "
+    ></script>
     <script defer src="assets/js/carousel.js"></script>
   </head>
-  <body class="page-wrapper">
-    <header>
-      <div class="container header-container">
-        <div class="header-inner">
-          <div class="hero">
-            <h1 class="hero-title">The Stone Tavern</h1>
-          </div>
-          <!-- <nav>
-            <ul class="nav-list">
-              <li>Our Story</li>
-              <li>Our Story</li>
-              <li>Our Story</li>
-            </ul>
-          </nav> -->
-        </div>
-      </div>
-    </header>
+  <body class="silo">
+    <nav class="">
+      <!-- <div class="slider">
+        <span>0</span>
+        <span>0</span>
+        <span>0</span>
+      </div> -->
 
-    <section>
-      <div class="container">
-        <h2 class="section-heading">Our Story</h2>
-        <div class="section-inner">
-          <div class="silo-2 about-section-bg-left">
-            <!-- <div class="silo-inner">
-              <div class="about-section-hero">
-                <h2>Our Story</h2>
-              </div>
-            </div> -->
+      <div class="nav-btns">
+        <button id="up" class="fas fa-sort-up" data-dir="up"></button>
+        <button id="down" class="fas fa-sort-up"></button>
+      </div>
+    </nav>
+
+    <section class="screen hero-screen">
+      <div class="hero-inner">
+        <h1 class="hero-title">The Stone Tavern</h1>
+        <h4 class="hero-title-sub">Bar and Grill</h4>
+      </div>
+    </section>
+
+    <section class="screen about-screen">
+      <div class="about-inner">
+        <div class="carousel-container">
+          <div class="carousel">
+            <img id="last" src="./assets/img/stone_tavern_05.jpg" alt="" />
+            <img src="./assets/img/stone_tavern_02.jpg" alt="" />
+            <img src="./assets/img/stone_tavern_03.jpg" alt="" />
+            <img src="./assets/img/stone_tavern_04.jpg" alt="" />
+            <img src="./assets/img/stone_tavern_05.jpg" alt="" />
+            <img id="first" src="./assets/img/stone_tavern_02.jpg" alt="" />
           </div>
-          <div class="silo-2 about-section-bg-right">
-            <div class="silo-inner">
-              <div class="about-section-content">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. A
-                  tempora quasi cupiditate doloremque! Nesciunt ipsam
-                  consequuntur, inventore facilis sequi, minus sapiente fuga
-                  molestiae voluptate aliquam quis, saepe voluptatem totam
-                  ducimus provident? Nam, distinctio obcaecati sit reiciendis
-                  laudantium natus doloremque alias. Commodi delectus, quasi
-                  ullam enim accusantium asperiores magni distinctio aliquam
-                  beatae, adipisci libero doloribus eligendi minus reiciendis
-                  optio quis laboriosam.
-                </p>
-              </div>
-            </div>
+          <div class="btn-container">
+            <button id="prevBtn" class="carousel-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Previous
+            </button>
+            <button id="nextBtn" class="carousel-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Next
+            </button>
           </div>
         </div>
       </div>
     </section>
-
-    <section>
-      <div class="container">
-        <div class="section-inner">
-          <div class="silo-1">
-            <div class="silo-inner pictures-section">
-              <div class="picture-box">
-                <div class="carousel">
-                  <img
-                    id="last"
-                    src="./assets/img/stone_tavern_05.jpg"
-                    alt=""
-                  />
-                  <img src="./assets/img/stone_tavern_02.jpg" alt="" />
-                  <img src="./assets/img/stone_tavern_03.jpg" alt="" />
-                  <img src="./assets/img/stone_tavern_04.jpg" alt="" />
-                  <img src="./assets/img/stone_tavern_05.jpg" alt="" />
-                  <img
-                    id="first"
-                    src="./assets/img/stone_tavern_02.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="btn-container">
-                <button id="prevBtn" class="carousel-btn">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  Previous
-                </button>
-                <button id="nextBtn" class="carousel-btn">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  Next
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer></footer>
   </body>
 </html>

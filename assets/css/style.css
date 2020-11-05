@@ -23,23 +23,23 @@
 
 nav {
   position: fixed;
-  z-index: 10;
-  width: 100%;
   height: 100%;
+  width: auto;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  z-index: 10;
 }
+
 .slider {
   margin-left: 3rem;
 }
 
 .nav-btns {
-  margin-right: 3rem;
+  margin-left: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -77,34 +77,132 @@ nav {
 
 .about-inner {
   position: relative;
-}
-.about-inner img {
-  position: absolute;
-}
-.about-inner img:nth-child(1) {
-  width: 600px;
-  right: 200px;
-  top: 320px;
-  transform: rotate(15deg);
-}
-.about-inner img:nth-child(2) {
-  width: 540px;
-  top: 120px;
-  left: 120px;
-  transform: rotate(-8deg);
-}
-.about-inner img:hover {
-  transform: translateZ(180deg);
+  display: grid;
+  place-content: center;
 }
 
 .about-copy {
   font-size: 1.5rem;
   font-weight: bolder;
+  width: 40%;
 }
 
 .span-title {
   font-family: Studebaker;
   font-width: boldest;
+}
+
+.carousel-container {
+  padding-top: 10rem;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  width: 900px;
+}
+.carousel img {
+  min-width: 900px;
+  max-width: 900px;
+  height: 600px;
+  padding: 0 2px;
+  box-shadow: 4px 2px 4px black;
+}
+
+.btn-container {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  z-index: 100;
+}
+
+.carousel-btn {
+  position: relative;
+  color: #938C7E;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.6rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+.carousel-btn:hover {
+  color: #1A1913;
+}
+
+.carousel-btn span {
+  display: block;
+  position: absolute;
+  background: #1A1913;
+}
+
+.carousel-btn span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s;
+}
+
+.carousel-btn:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.3s;
+}
+
+.carousel-btn span:nth-child(2) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.carousel-btn:hover span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.carousel-btn span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s;
+}
+
+.carousel-btn:hover span:nth-child(3) {
+  transform: scaleX(1);
+  transform-origin: top;
+  transition: transform 0.3s;
+}
+
+.carousel-btn span:nth-child(4) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.carousel-btn:hover span:nth-child(4) {
+  transform: scaleY(1);
+  transform-origin: right;
+  transition: transform 0.3s;
 }
 
 *,

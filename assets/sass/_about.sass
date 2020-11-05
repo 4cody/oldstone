@@ -2,29 +2,125 @@
 
 .about-inner
   position: relative
+  display: grid
+  place-content: center
 
-  img
-    position: absolute
-
-  img:nth-child(1)
-    width: 600px
-    right: 200px
-    top: 320px
-    transform: rotate(15deg)
-
-  img:nth-child(2)
-    width: 540px
-    top: 120px
-    left: 120px
-    transform: rotate(-8deg)
-
-  img:hover
-    transform: translateZ(180deg)
 
 .about-copy
   font-size: vars.$font_3
   font-weight: bolder
+  width: 40%
 
 .span-title
   font-family: vars.$main_font
   font-width: boldest
+
+
+.carousel-container
+  padding-top: 10rem
+  overflow: hidden
+
+.carousel
+  display: flex
+  width: 900px
+
+  img
+    min-width: 900px
+    max-width: 900px
+    height: 600px
+    padding: 0 2px
+    box-shadow: 4px 2px 4px black
+
+
+.btn-container
+  padding-top: 1rem
+  display: flex
+  justify-content: space-around
+  z-index: 100
+
+.carousel-btn
+  position: relative
+  color: vars.$palette-lighter
+  border: none
+  background: none
+  outline: none
+  cursor: pointer
+  padding: .6rem 2rem
+  text-decoration: none
+  text-transform: uppercase
+  letter-spacing: .1rem
+  font-size: 1.2rem
+  transition: .5s
+
+.carousel-btn:hover
+  color: vars.$palette-darkest
+
+.carousel-btn
+  span
+    display: block
+    position: absolute
+    background: vars.$palette-darkest
+
+.carousel-btn
+  span:nth-child(1)
+    left: 0
+    bottom: 0
+    width: 1px
+    height: 100%
+    transform: scaleY(0)
+    transform-origin: top
+    transition: transform .3s
+
+.carousel-btn:hover 
+  span:nth-child(1)
+    transform: scaleY(1)
+    transform-origin: bottom
+    transition: transform .3s
+
+.carousel-btn
+  span:nth-child(2)
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 1px
+    transform: scaleX(0)
+    transform-origin: right
+    transition: transform .3s
+
+.carousel-btn:hover 
+  span:nth-child(2)
+    transform: scaleX(1)
+    transform-origin: left
+    transition: transform .3s
+
+.carousel-btn
+  span:nth-child(3)
+    right: 0
+    bottom: 0
+    width: 1px
+    height: 100%
+    transform: scaleY(0)
+    transform-origin: bottom
+    transition: transform .3s
+
+.carousel-btn:hover 
+  span:nth-child(3)
+    transform: scaleX(1)
+    transform-origin: top
+    transition: transform .3s
+
+.carousel-btn
+  span:nth-child(4)
+    left: 0
+    top: 0
+    width: 100%
+    height: 1px
+    transform: scaleX(0)
+    transform-origin: left
+    transition: transform .3s
+
+.carousel-btn:hover 
+  span:nth-child(4)
+    transform: scaleY(1)
+    transform-origin: right
+    transition: transform .3s

@@ -1,8 +1,6 @@
 @use 'vars'
 
-.pictures-section
-  display: grid
-  place-content: center
+
 
 .carousel-container
   overflow: hidden
@@ -42,27 +40,27 @@
 .carousel-btn:hover
   color: vars.$palette-darkest
 
-.carousel-btn
-  span
-    display: block
-    position: absolute
-    background: vars.$palette-darkest
+// .carousel-btn
+//   span
+//     display: block
+//     position: absolute
+//     background: vars.$palette-darkest
 
-.carousel-btn
-  span:nth-child(1)
-    left: 0
-    bottom: 0
-    width: 1px
-    height: 100%
-    transform: scaleY(0)
-    transform-origin: top
-    transition: transform .3s
+// .carousel-btn
+//   span:nth-child(1)
+//     left: 0
+//     bottom: 0
+//     width: 1px
+//     height: 100%
+//     transform: scaleY(0)
+//     transform-origin: top
+//     transition: transform .3s
 
-.carousel-btn:hover 
-  span:nth-child(1)
-    transform: scaleY(1)
-    transform-origin: bottom
-    transition: transform .3s
+// .carousel-btn:hover 
+//   span:nth-child(1)
+//     transform: scaleY(1)
+//     transform-origin: bottom
+//     transition: transform .3s
 
 // .carousel-btn
 //   span:nth-child(2)

@@ -3,78 +3,26 @@
   src: url(../StudebakerNF.ttf);
 }
 .hero-screen {
-  display: grid;
-  place-content: center;
-  background-image: radial-gradient(#938C7E, #dddddd);
+  padding-top: 2em;
 }
 
 .hero-title {
-  font-size: 9rem;
-  margin-top: 2rem;
+  font-size: 2.2rem;
 }
 
 .hero-title-sub {
   font-family: "Lato", sans-serif;
-  font-size: 2.2rem;
+  font-size: 1rem;
   text-align: end;
   color: white;
   text-shadow: 2px 2px 4px black;
 }
 
-nav {
-  position: fixed;
-  height: 100%;
-  width: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  z-index: 10;
+@media screen and (min-width: 700px) {
+  .hero-title {
+    font-size: 9rem;
+  }
 }
-
-.slider {
-  margin-left: 3rem;
-}
-
-.nav-btns {
-  margin-left: 3rem;
-  display: flex;
-  flex-direction: column;
-}
-.nav-btns button {
-  outline: none;
-  font-size: 2rem;
-  border-radius: 24px;
-  background: none;
-  border: 2px solid white;
-  width: 3rem;
-  height: 3rem;
-  margin: 7rem 0;
-  transition: all 0.3s ease-out;
-}
-.nav-btns button:hover {
-  background: #dddddd;
-  border-color: #1A1913;
-  border-radius: 24px 24px 2px 2px;
-}
-.nav-btns button:active {
-  padding-bottom: 15px;
-}
-
-#down {
-  transform: rotate(180deg);
-}
-
-.slider {
-  display: flex;
-  flex-direction: column;
-}
-.slider span {
-  margin: 1rem;
-}
-
 .about-inner {
   position: relative;
   display: grid;
@@ -99,12 +47,12 @@ nav {
 
 .carousel {
   display: flex;
-  width: 900px;
+  width: 100%;
 }
 .carousel img {
-  min-width: 900px;
-  max-width: 900px;
-  height: 600px;
+  min-width: 100%;
+  max-width: 100%;
+  height: 200px;
   padding: 0 2px;
   box-shadow: 4px 2px 4px black;
 }
@@ -205,6 +153,26 @@ nav {
   transition: transform 0.3s;
 }
 
+footer {
+  background-color: #1A1913;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-content {
+  color: #dddddd;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+  background: white;
+  margin-bottom: 0.5em;
+}
+
 *,
 *::before,
 *::after {
@@ -220,7 +188,7 @@ html {
 }
 
 body {
-  background-color: #dddddd;
+  background-image: radial-gradient(#938C7E, #dddddd);
   min-height: 100vh;
 }
 
@@ -234,29 +202,12 @@ ul {
 
 .silo {
   width: 100%;
-  min-height: 100vh;
-  position: relative;
+  height: 100vh;
 }
 
 .screen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0 2rem;
-  opacity: 0;
-  transition: all 0.3s ease-out;
-}
-
-.screen active {
-  opacity: 1;
-}
-
-@media only screen and (max-width: 790px) {
-  body {
-    background: red;
-  }
+  height: 100vh;
+  min-height: 600px;
 }
 
 /*# sourceMappingURL=style.css.map */

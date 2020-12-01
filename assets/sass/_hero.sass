@@ -1,17 +1,19 @@
 @use 'vars'
     
 .hero-screen
-  display: grid
-  place-content: center
-  background-image: radial-gradient(vars.$palette_lighter, vars.$palette_white)
+  padding-top: 2em
 
 .hero-title
-  font-size: vars.$font_7
-  margin-top: 2rem
+  font-size: vars.$font_4
 
 .hero-title-sub
   font-family: vars.$secondary_font
-  font-size: vars.$font_4
+  font-size: vars.$font_2
   text-align: end
   color: white
   text-shadow: 2px 2px 4px black
+
+@media screen and ( min-width: 700px  )
+  .hero-title
+    font-size: vars.$font_7
+  
